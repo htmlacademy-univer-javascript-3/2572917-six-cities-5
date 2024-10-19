@@ -2,10 +2,10 @@
 import { Main } from './pages/Main';
 import {IPlaceCard} from './types';
 
-type AppScreenProps = {
+type AppProps = {
   places: IPlaceCard[];
 }
 
-export const App: React.FC<AppScreenProps> = ({places}) => (
+export const App: React.FC<AppProps> = ({places}) => (
   <Main places={places}/>
 );
