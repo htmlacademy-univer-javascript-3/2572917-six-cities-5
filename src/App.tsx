@@ -1,5 +1,5 @@
 ﻿import React from 'react';
-import { Main } from './pages/Main';
+import { Main } from './pages/Main/Main';
 import {IPlaceCard} from './types';
 
 type AppProps = {
