@@ -2,7 +2,7 @@
 import {IMapProps, IPlaceCard} from '../types.ts';
 import {Icon, layerGroup, Marker} from 'leaflet';
 import {URL_MARKER_CURRENT, URL_MARKER_DEFAULT} from '../constant.ts';
-import useMap from '../hooks/usemap.tsx';
+import useMap from '../hooks/use-map.tsx';
 import 'leaflet/dist/leaflet.css';
 
 const defaultCustomIcon = new Icon({
