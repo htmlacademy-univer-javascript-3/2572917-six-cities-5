@@ -1,15 +1,9 @@
 ﻿import React, {useEffect, useRef} from 'react';
-import {ICity, IPlaceCard} from '../types.ts';
+import {IMapProps, IPlaceCard} from '../types.ts';
 import {Icon, layerGroup, Marker} from 'leaflet';
 import {URL_MARKER_CURRENT, URL_MARKER_DEFAULT} from '../constant.ts';
 import useMap from '../hooks/usemap.tsx';
 import 'leaflet/dist/leaflet.css';
-
-type MapProps = {
-  city: ICity;
-  places: IPlaceCard[];
-  selectedPlace: IPlaceCard | undefined;
-};
 
 const defaultCustomIcon = new Icon({
   iconUrl: URL_MARKER_DEFAULT,
@@ -23,7 +17,7 @@ const currentCustomIcon = new Icon({
   iconAnchor: [20, 40]
 });
 
-export const Map: React.FC<MapProps> = (props: MapProps) => {
+export const Map: React.FC<IMapProps> = (props: IMapProps) => {
   const {city, places, selectedPlace} = props;
 
   const mapRef = useRef(null);

@@ -10,7 +10,7 @@ export interface IPlaceCard {
     price: number;
     rating: 1 | 2 | 3 | 4 | 5;
     type: PlaceType;
-    location: TPoint;
+    location: IPoint;
 }
 
 export interface IPlaceCardProps {
@@ -43,12 +43,18 @@ export type CityName = 'Paris' | 'Cologne' | 'Brussels' | 'Amsterdam' | 'Hamburg
 
 export interface ICity {
     name: CityName;
-    location: TPoint;
+    location: IPoint;
 }
 
-export type TPoint = {
+export interface IPoint {
     latitude: number;
     longitude: number;
 }
 
 export type PlaceType = 'Apartment' | 'Room';
+
+export interface IMapProps {
+    city: ICity;
+    places: IPlaceCard[];
+    selectedPlace: IPlaceCard | undefined;
+}
