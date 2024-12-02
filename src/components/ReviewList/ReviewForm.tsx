@@ -1,6 +1,6 @@
 ﻿import {useState} from 'react';
-import {ReviewRate} from './ReviewRate.tsx';
-import {IReviewFormState} from '../types.ts';
+import {ReviewRate} from '../ReviewRate.tsx';
+import {IReviewFormState} from '../../types.tsx';
 
 export const ReviewForm = () => {
 
